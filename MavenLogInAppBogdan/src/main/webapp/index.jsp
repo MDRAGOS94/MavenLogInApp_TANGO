@@ -19,7 +19,7 @@
 
 <h3 align="center">
     Proceed to log in:
-    <form action="LoginPage.jsp">
+    <form action="dragos.jsp">
         <button type="submit" class="btn btn-default">Log in</button>
     </form>
 </h3>
