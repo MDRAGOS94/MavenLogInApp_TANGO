@@ -6,5 +6,6 @@ import com.traistarudragos.servlet.model.User;
  * Created by DRAGOS_M on 6/30/2015.
  */
 public interface UserDAO {
-    public User findUserByName(String userName);
+    User findUserByName(String userName);
+    User findUserByNamePassword(String userName, String userPassword);
 }
