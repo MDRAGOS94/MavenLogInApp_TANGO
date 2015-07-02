@@ -13,6 +13,7 @@ public class UserDAOInMemory implements  UserDAO {
         add(new User("andras", "andras"));
         add(new User("florin", "florin"));
         add(new User("test", "test"));
+        add(new User("admin", "admin"));
     }};
 
 
@@ -24,4 +25,18 @@ public class UserDAOInMemory implements  UserDAO {
         }
         return null;
     }
+
+    public User findUserByNamePassword(String userName, String userPassword) {
+        for (User user : listOfUsers) {
+            if (user.getUserName().equals(userName) && user.getUserPassword().equals(userPassword)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public List<User> getListOfUsers() {
+        return listOfUsers;
+    }
+
 }

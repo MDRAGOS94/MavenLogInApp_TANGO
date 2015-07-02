@@ -36,7 +36,7 @@ public class AuthenticationFilter implements Filter {
 
         if (session == null || session.getAttribute("loggedIn") == null ) {
             this.context.log("Unauthorized access request");
-            res.sendRedirect("LoginPage.jsp");
+            res.sendRedirect("dragos.jsp");
         } else {
             // pass the request along the filter chain
             chain.doFilter(request, response);

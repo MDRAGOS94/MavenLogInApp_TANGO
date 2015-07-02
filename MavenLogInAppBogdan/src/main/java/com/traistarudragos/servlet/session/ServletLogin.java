@@ -1,12 +1,15 @@
 package com.traistarudragos.servlet.session;
 
-import com.traistarudragos.servlet.handlers.AuthenticationHandler;
+import com.traistarudragos.servlet.dao.UserDAO;
+import com.traistarudragos.servlet.dao.UserDAOInMemory;
+import com.traistarudragos.servlet.model.User;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.*;;
 
 @WebServlet("/loginServlet")
 public class ServletLogin extends HttpServlet {
@@ -24,20 +27,25 @@ public class ServletLogin extends HttpServlet {
         String user = request.getParameter("userName");
         String password = request.getParameter("userPassword");
 
-        AuthenticationHandler authenticationHandler = new AuthenticationHandler();
-        if (authenticationHandler.checkLogin(user, password) == true) {
+        UserDAO userDAO = new UserDAOInMemory();
+        if (userDAO.findUserByNamePassword(user, password) != null) {
             HttpSession session = request.getSession();
-            session.setAttribute("loggedIn", true);
+            session.setAttribute("loggedIn", user);
 
             //session.setMaxInactiveInterval(30*60);
             Cookie userName = new Cookie("user", user);
-            userName.setMaxAge(30*60);
+            userName.setMaxAge(30 * 60);
             response.addCookie(userName);
-            response.sendRedirect("index.jsp");
+
+            UserDAOInMemory userDAOInMemory = new UserDAOInMemory();
+            User userToDisplayOnJSP = userDAOInMemory.findUserByName(user);
+            request.setAttribute("user", userToDisplayOnJSP);
+
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            requestDispatcher.forward(request, response);
         } else {
             request.setAttribute("errorMessage", "INVALID LOGIN !");
-            request.getRequestDispatcher("/LoginPage.jsp").forward(request, response);
+            request.getRequestDispatcher("/dragos.jsp").forward(request, response);
         }
     }
 }
-

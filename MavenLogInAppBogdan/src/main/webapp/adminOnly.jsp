@@ -11,13 +11,13 @@
     <title>
       User only page
     </title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="login_style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login_style.css">
     <div class="page-header">
       <h3 align="center">Team Tango <small>A web programming team</small></h3>
     </div>
 </head>
-<body background="blue_wallpaper2.jpg">
+<body background="images/blue_wallpaper2.jpg">
 
 <h3>
   This page is only accessible by a logged in user. <br>
