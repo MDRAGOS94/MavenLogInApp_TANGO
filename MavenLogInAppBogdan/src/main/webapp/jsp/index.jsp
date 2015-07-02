@@ -4,18 +4,22 @@
     <title>
         Homepage
     </title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="login_style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login_style.css">
     <div class="page-header">
         <h3 align="center">Team Tango <small>A web programming team</small></h3>
     </div>
 </head>
 
-<body background="blue_wallpaper2.jpg">
+<body background="../images/blue_wallpaper2.jpg">
 
 <h2 align="center">Welcome to the homepage</h2>
 
-<br><br>
+<h5 align="center">
+    <form action="adminOnly.jsp">
+        <button type="submit" class="btn btn-default">Documentation</button>
+    </form>
+</h5>
 
 <h3 align="center">
     Proceed to log in:
@@ -26,7 +30,7 @@
 
 <h4 align="center">
     Team Tango
-    <img src="tangoGIF.gif" height=50% width=25%>
+    <img src="../images/tangoGIF.gif" height=50% width=25%>
 </h4>
 
 <footer class="footer">
