@@ -12,8 +12,8 @@ public class Permission implements PermissionLogic {
 
     public boolean userHasAccessToPage(String url, String userName)
     {
-        User user=new User(userName);
-        user=TangoDAOLocator.getUserDAOInMemory().findUserByName(userName);
+        //User user=new User(userName);
+        User user=TangoDAOLocator.getUserDAOInMemory().findUserByName(userName);
         if(user.getListOfPermissions()==null)
             return false;
         for(com.tango.model.Permission p: user.getListOfPermissions())
