@@ -51,6 +51,8 @@
 
         <button>Click to show/hide documentation</button>
 
+        <br>
+
         <div class="list-group" id="div1">
             <a href="http://www.tutorialspoint.com/servlets" class="list-group-item">Servlets Tutorial</a>
         </div>

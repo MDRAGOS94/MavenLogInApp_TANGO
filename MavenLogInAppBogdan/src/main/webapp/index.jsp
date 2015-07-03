@@ -20,7 +20,7 @@
 
         <h5 align="center">
             <form action="adminOnly.jsp">
-                 <button type="submit" class="btn btn-default">Documentation</button>
+                <button type="submit" class="btn btn-default">Documentation</button>
              </form>
         </h5>
 
@@ -36,8 +36,9 @@
     <div id="content">
 
         <h4 align="center">
-             Team Tango
-             <img src="images/tangoGIF.gif" height=50% width=25%>
+             <div id="gif">
+                 <img src="images/tangoGIF.gif" height=50% width=25%>
+             </div>
         </h4>
 
     </div>
@@ -50,6 +51,18 @@
 
 
 </div>
+
+<script src="js/animation.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    var gif = document.getElementById('gif');
+
+    addEvent(gif, 'click', function(){
+        /**alert('clicked');          check if the image is clicked*/
+    })
+
+
+</script>
 
 <script src="js/script.js"></script>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
