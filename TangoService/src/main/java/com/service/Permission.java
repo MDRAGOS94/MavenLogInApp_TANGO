@@ -8,8 +8,7 @@ import com.tango.model.User;
  */
 public class Permission implements PermissionLogic {
 
-    protected Permission() {
-    }
+
 
     public boolean userHasAccessToPage(String url, String userName)
     {
