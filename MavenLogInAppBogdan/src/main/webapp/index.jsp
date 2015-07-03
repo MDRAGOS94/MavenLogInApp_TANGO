@@ -13,31 +13,43 @@
 
 <body background="images/blue_wallpaper2.jpg">
 
-<h2 align="center">Welcome to the homepage</h2>
+<div id="wrapper">
 
-<h5 align="center">
-    <form action="adminOnly.jsp">
-        <button type="submit" class="btn btn-default">Documentation</button>
-    </form>
-</h5>
+    <div id="header">
+        <h2 align="center">Welcome to the homepage</h2>
 
-<h3 align="center">
-    Proceed to log in:
-    <form action="dragos.jsp">
-        <button type="submit" class="btn btn-default">Log in</button>
-    </form>
-</h3>
+        <h5 align="center">
+            <form action="adminOnly.jsp">
+                 <button type="submit" class="btn btn-default">Documentation</button>
+             </form>
+        </h5>
 
-<h4 align="center">
-    Team Tango
-    <img src="images/tangoGIF.gif" height=50% width=25%>
-</h4>
+        <h3 align="center">
+            Proceed to log in:
+            <form action="dragos.jsp">
+                <button type="submit" class="btn btn-default">Log in</button>
+            </form>
+        </h3>
 
-<footer class="footer">
-    <div class="container">
-        <p>All rights reserved <b>Team Tango</b></p>
     </div>
-</footer>
+
+    <div id="content">
+
+        <h4 align="center">
+             Team Tango
+             <img src="images/tangoGIF.gif" height=50% width=25%>
+        </h4>
+
+    </div>
+
+    <div id="footer">
+        <div class="box" align="right">
+            <p>All rights reserved <b>Team Tango</b></p>
+        </div>
+    </div>
+
+
+</div>
 
 <script src="js/script.js"></script>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>

@@ -37,42 +37,51 @@
 </head>
 <body background="images/blue_wallpaper2.jpg">
 
-<h3>
-  This page is only accessible by a logged in user. <br>
-  This are all the resources used to create this:
-</h3>
+<div id="wrapper">
+    <div id="header">
+        <h3>
+            This page is only accessible by a logged in user. <br>
+            This are all the resources used to create this:
+        </h3>
+    </div>
 
-<br><br>
+    <br><br>
 
-<button>Click to show/hide documentation</button>
+    <div id="content">
 
-<div class="list-group" id="div1">
-  <a href="http://www.tutorialspoint.com/servlets" class="list-group-item">Servlets Tutorial</a>
+        <button>Click to show/hide documentation</button>
+
+        <div class="list-group" id="div1">
+            <a href="http://www.tutorialspoint.com/servlets" class="list-group-item">Servlets Tutorial</a>
+        </div>
+
+        <div class="list-group" id="div2">
+            <a href="http://www.tutorialspoint.com/maven" class="list-group-item">Maven Tutorial</a>
+        </div>
+
+        <div class="list-group" id="div3">
+            <a href="http://www.tutorialspoint.com/design_pattern/mvc_pattern.htm" class="list-group-item">MVC
+                pattern</a>
+        </div>
+
+        <div class="list-group" id="div4">
+            <a href="http://www.slideshare.net/dnene/rest-representational-state-transfer-explained"
+               class="list-group-item">State transfer explained</a>
+        </div>
+
+        <div class="list-group" id="div5">
+            <a href="http://www.codejava.net/java-ee/servlet/handling-html-form-data-with-java-servlet"
+               class="list-group-item">Handling html form data</a>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="box" align="right">
+            <p>All rights reserved <b>Team Tango</b></p>
+        </div>
+    </div>
+
 </div>
-
-<div class="list-group" id="div2">
-  <a href="http://www.tutorialspoint.com/maven" class="list-group-item">Maven Tutorial</a>
-</div>
-
-<div class="list-group" id="div3">
-    <a href="http://www.tutorialspoint.com/design_pattern/mvc_pattern.htm" class="list-group-item">MVC pattern</a>
-</div>
-
-<div class="list-group" id="div4">
-    <a href="http://www.slideshare.net/dnene/rest-representational-state-transfer-explained" class="list-group-item">State transfer explained</a>
-</div>
-
-<div class="list-group" id="div5">
-    <a href="http://www.codejava.net/java-ee/servlet/handling-html-form-data-with-java-servlet" class="list-group-item">Handling html form data</a>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-<footer class="footer">
-  <div class="container">
-    <p>All rights reserved <b>Team Tango</b></p>
-  </div>
-</footer>
-
 </body>
 </html>
