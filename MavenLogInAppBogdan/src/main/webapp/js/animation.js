@@ -14,8 +14,44 @@ function addEvent(object, event, fn, capture) {
 }
 
 function moveDiv(object, distance, speed) {
-    if (!distance) distance = 250;
-    if (!speed) speed = 500;
+    if (!distance) distance = 250;    // valori implicite
+    if (!speed) speed = 500;          // valori implicite
 
-    //if object.style.marginLeft();
+    if (!object.style.marginLeft)
+        object.style.marginLeft = 0 + "px";
+
+    var timer = null,
+        startTime = ( new Date).getTime(),
+        elapsed = null;
+        d = null;
+
+    // console.log(startTime); //test
+    timer = setInterval(function() {
+        elapsed = (new Date).getTime() - startTime;
+        //console.log(elapsed); //test
+
+        if (elapsed < speed) { // do the animation
+            d = elapsed / speed * distance;
+            //console.log(d); // test
+            object.style.marginLeft = d + "px";
+        } else { // stop the animation
+            clearInterval(timer);
+        }
+        //console.log(elapsed); //yep, another test
+    }, 5);
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

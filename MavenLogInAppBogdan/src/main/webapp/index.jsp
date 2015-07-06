@@ -58,8 +58,9 @@
     var gif = document.getElementById('gif');
 
     addEvent(gif, 'click', function(){
-        /**alert('clicked');          check if the image is clicked*/
-    })
+        //alert('clicked');          //check if the image is clicked
+        moveDiv(gif, 500, 2000);
+    });
 
 
 </script>
